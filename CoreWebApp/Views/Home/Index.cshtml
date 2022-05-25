@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+@{
+    string annotation1 = "Total";
+    string annotation2 = "Otros";
+    string annotation3 = "Expert Monitoring";
+    string annotation4 = "Liquidacion Nacional";
+    string annotation5 = "Autorizacion Nacional";
+    string annotation6 = "Cuentas & Tarjetas";
+    string annotation7 = "Decision Intelligence";
+    string annotation8 = "Ventas";
+
+}
+
+<ejs-chart id="chart" title="Variacion Absoluta">
+   <e-chart-annotations >
+     <e-chart-annotation content="<div>202</div>" X="annotation1" Y="207" CoordinateUnits='@Syncfusion.EJ2.Charts.Units.Point'> 
+     </e-chart-annotation>
+     <e-chart-annotation content="<div>21</div>" X="annotation2" Y="205" CoordinateUnits='@Syncfusion.EJ2.Charts.Units.Point'> 
+     </e-chart-annotation>
+     <e-chart-annotation content="<div>-31</div>" X="annotation3" Y="176" CoordinateUnits='@Syncfusion.EJ2.Charts.Units.Point'> 
+     </e-chart-annotation>
+     <e-chart-annotation content="<div>16</div>" X="annotation4" Y="215" CoordinateUnits='@Syncfusion.EJ2.Charts.Units.Point'> 
+     </e-chart-annotation>
+     <e-chart-annotation content="<div>17</div>" X="annotation5" Y="198" CoordinateUnits='@Syncfusion.EJ2.Charts.Units.Point'> 
+     </e-chart-annotation>
+     <e-chart-annotation content="<div>23</div>" X="annotation6" Y="182" CoordinateUnits='@Syncfusion.EJ2.Charts.Units.Point'> 
+     </e-chart-annotation>
+     <e-chart-annotation content="<div>39</div>" X="annotation7" Y="158" CoordinateUnits='@Syncfusion.EJ2.Charts.Units.Point'> 
+     </e-chart-annotation>
+     <e-chart-annotation content="<div>116</div>" X="annotation8" Y="120" CoordinateUnits='@Syncfusion.EJ2.Charts.Units.Point'> 
+     </e-chart-annotation>
+   </e-chart-annotations>
+   <e-chart-primaryxaxis valueType="Category">
+        <e-majorgridlines width="0"></e-majorgridlines>
+        <e-majorticklines width="0"></e-majorticklines>
+   </e-chart-primaryxaxis>
+   <e-chart-primaryyaxis>
+      <e-majorgridlines width="0"></e-majorgridlines>
+      <e-majorticklines width="0"></e-majorticklines>
+   </e-chart-primaryyaxis>
+   <e-series-collection>
+      <e-series dataSource="ViewBag.dataSource" xName="x" yName="baseline" type="@Syncfusion.EJ2.Charts.ChartSeriesType.StackingBar" Fill="#FFFFFF"></e-series>
+      <e-series dataSource="ViewBag.dataSource" xName="x" yName="y1" type="@Syncfusion.EJ2.Charts.ChartSeriesType.StackingBar" Fill="#fa4a00"></e-series>
+      <e-series dataSource="ViewBag.dataSource" xName="x" yName="y2" type="@Syncfusion.EJ2.Charts.ChartSeriesType.StackingBar" Fill="#000095"></e-series>
+   </e-series-collection>
+</ejs-chart>
